@@ -27,3 +27,9 @@ def get_filme_usando_id(id_filme: int):
         if(filme.id == id_filme):
             return filme
     return {"Status": 404, "Mensagem": "Filme não encontrado"}
+
+# Rota Insera
+@app.post("/filmes")
+def insere_filme(filme: Filme):
+    base_de_dados.append(filme)
+    return filme
