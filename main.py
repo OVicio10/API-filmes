@@ -33,3 +33,13 @@ def get_filme_usando_id(id_filme: int):
 def insere_filme(filme: Filme):
     base_de_dados.append(filme)
     return filme
+
+# Deleta filme
+@app.delete("/filmes/delete/{id}")
+def deleta_filme(id):
+    for filme in base_de_dados:
+        if(filme.id == id):
+            base_de_dados.remove(filme)
+            return
+
+# Att filme
