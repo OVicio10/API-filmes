@@ -1,8 +1,8 @@
 # API-filmes
 
-=====Instalação
+## Instalação
 pip install fastapi
 pip install uvicorn
 
-=====Abrir a API
+## Abrir a API
 uvicorn main:app --reload
